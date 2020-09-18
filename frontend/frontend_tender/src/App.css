@@ -1,5 +1,8 @@
 .App {
   text-align: center;
+  background-color: rgb(233, 230, 230);
+  height: 100vh;
+  position: relative;
 }
 
 .App-logo {
@@ -26,6 +29,13 @@
 
 .App-link {
   color: #61dafb;
+}
+
+.footer{
+  position: fixed !important;
+  bottom: 0 !important;
+  width: 100%;
+  background-color: rgb(240, 79, 79);
 }
 
 @keyframes App-logo-spin {

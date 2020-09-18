@@ -1,0 +1,45 @@
+.inputLogin{
+    border: 5px !important;
+    border-radius: 6px !important;
+    padding-left: 10px !important;
+    -webkit-box-shadow: 0 0 0 1px rgba(143, 145, 146, 0.205) !important;
+    box-shadow: 0 0 0 1px rgba(74, 75, 75, 0.205) !important;
+}
+.cardLogin{
+    border-radius: 6px !important;
+}
+.btnLogin{
+    width: 100%;
+}
+.btnLoginContainer{
+    padding-right: 0 !important;
+}
+.loginContainer{
+    padding-top: 7%;
+}
+.hLineContainer{
+    padding-right: 0 !important;
+    margin-top: 2%;
+}
+.hLine{
+    color: red;
+}
+.fPass{
+    padding-top: 20px;
+    color: black;
+}
+.fPassContainer{
+    margin-top: 5%;
+}
+.btnRegister{
+    width: 70%;
+    height: 50px;
+}
+.btnRegisterContainer{
+    margin-top: 4%;
+}
+.slogan{
+    font-weight: 100;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: xx-large;
+}
