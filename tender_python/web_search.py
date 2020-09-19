@@ -1,5 +1,4 @@
 from selenium import webdriver
-import time
 
 class Webtender:
     def __init__(self):
@@ -7,6 +6,9 @@ class Webtender:
         self.browser = webdriver.Opera(executable_path=self.path)
         self.browser.get('https://jnportal.ujn.gov.rs/oglasi-svi')
         self.arrayofvalues = None
+        self.allDataR = []
+        self.twenty = self.browser.find_element_by_xpath('//*[@id="searchGridContainer"]/div/div[11]/div[1]/div[3]')
+        self.twenty.click()
 
     def find_keyword(self, keyword):
         self.str1 = '//*[@id="searchGridContainer"]/div/div[5]/div'
@@ -26,7 +28,17 @@ class Webtender:
             self.login = self.browser.find_element_by_xpath('//*[@id="uiLogin"]')
             self.login.click()
             self.browser.get('https://jnportal.ujn.gov.rs/oglasi-svi')
+            self.twenty=self.browser.find_element_by_xpath('//*[@id="searchGridContainer"]/div/div[11]/div[1]/div[3]')
+            self.twenty.click()
         finally:
             print('')
-    # def putinarray(self):   ovde planiram da stavim sva polja iz tabele koje su danasnjeg datuma(jer ih nema mnogo na dnevnom nivou)
-                              # nakon toga trebam da ih sortiram po kljucnim recima
+
+    def find_table_rows(self):
+         str1 = '//*[@id="searchGridContainer"]'
+         self.table = self.browser.find_element_by_xpath(str1+'/div/div[6]/div/div/div[1]/div/table/tbody')
+         for i in range(3, 21):
+             self.ro = []
+             for j in range(1, 9):
+                self.ro.append(self.table.find_element_by_xpath("//tr[" + str(i) + "]/td[" + str(j) + "]").text)
+             self.allDataR.append(self.ro)
+         print(self.allDataR)
