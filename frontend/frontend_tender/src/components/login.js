@@ -9,9 +9,12 @@ class Login extends React.Component{
         this.inputEmailChanged = this.inputEmailChanged.bind(this);
         this.inputPasswordChanged = this.inputPasswordChanged.bind(this);
         this.btnCreateAccountClicked = this.btnCreateAccountClicked.bind(this);
+        this.btnLoginClicked = this.btnLoginClicked.bind(this);
+        this.btnForgottenPasswordClicked = this.btnForgottenPasswordClicked.bind(this);
+
         this.state = {
-            inputEmailValue: " ",
-            inputPasswordChanged: " "
+            inputEmailValue: "",
+            inputPasswordValue: ""
         }
     }
 
@@ -20,13 +23,22 @@ class Login extends React.Component{
     }
 
     inputPasswordChanged(e) {
-        this.setState({inputPasswordChanged: e.target.value})
+        this.setState({inputPasswordValue: e.target.value})
     }
     btnCreateAccountClicked(){
         window.location.replace('/createAccount')
     }
 
-    //TODO:slogan prebaci na eng
+    btnForgottenPasswordClicked(){
+        window.location.replace('/forgottenPassword')
+    }
+     
+    btnLoginClicked(){
+        //TODO: smisli lepse ime umesto mainPage
+        window.location.replace('/mainPage')
+    }
+
+    //TODO: slogan prebaci na eng
     render(){
         return (
             <Container className = "loginContainer">
@@ -38,7 +50,7 @@ class Login extends React.Component{
                         <Card className = "cardLogin">
                             <Row>
                                 <Col className = "inputEmailContainer s12">
-                                    <Input onChange={this.emailInputChanged}
+                                    <Input onChange={this.inputEmailChanged}
                                             value={this.state.inputEmailValue}
                                             type="email"
                                             className = "inputLogin"
@@ -54,12 +66,12 @@ class Login extends React.Component{
                                     ></Input>
                                 </Col>
                                 <Col className = "btnLoginContainer s12">
-                                    <Button className = "btnLogin red">
+                                    <Button className = "btnLogin red" onClick={this.btnLoginClicked}>
                                         Login
                                     </Button>
                                 </Col>
                                 <Col className = "fPassContainer s12">
-                                    <a className = "fPass" href="https://www.w3schools.com/">Forgotten password?</a>
+                                    <a className = "fPass" href="/forgottenPassword">Forgotten password?</a>
                                 </Col>
                                 <Col className = "hLineContainer s12">
                                     <hr className = "hLine"></hr>

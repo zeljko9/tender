@@ -2,6 +2,9 @@ import React from 'react';
 import { BrowserRouter, Route } from 'react-router-dom'
 import Login from './components/login'
 import CreateAccount from './components/createAccount'
+import MainPage from "./components/mainPage";
+import ForgottenPassword  from "./components/forgottenPassword";
+import NewPassword from "./components/newPassword";
 import { Footer } from 'react-materialize';
 import './App.css';
 
@@ -12,6 +15,9 @@ function App() {
      <div className="App">
      <Route exact path = '/' render={() => <Login />}/>
      <Route exact path = '/createAccount' render={() => <CreateAccount />}/>
+     <Route exact path = '/mainPage' render={() => <MainPage />}/>
+     <Route exact path = '/forgottenPassword' render={() => <ForgottenPassword />}/>
+     <Route exact path = '/newPassword' render={() => <NewPassword />}/>
       <Footer className="footer" copyrights="© 2020 Copyright Text"
         links={
           <ul>

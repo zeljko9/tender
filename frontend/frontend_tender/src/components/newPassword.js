@@ -1,0 +1,69 @@
+import React from 'react';
+import { Button, Col, Container, Row } from 'react-materialize';
+import { Input } from 'reactstrap';
+import './mainPage.css';
+
+//np = new password
+//RPassword = repeated password
+
+class NewPassword extends React.Component {
+
+    constructor(){
+        super();
+        this.inputPasswordChanged = this.inputPasswordChanged.bind(this);
+        this.inputRPasswordChanged = this.inputRPasswordChanged.bind(this);
+        this.btnNpClicked = this.btnNpClicked.bind(this);
+
+        this.state = {
+            inputPasswordValue: "",
+            inputRPasswordValue: "",
+        }
+
+    }
+
+    inputPasswordChanged(e) {
+        this.setState({inputPasswordValue: e.target.value})
+    }
+    
+    inputRPasswordChanged(e) {
+        this.setState({inputRPasswordValue: e.target.value})
+    }
+    btnNpClicked(){
+        window.location.replace('/')
+    }
+
+    render(){
+        return (
+            <Container>
+                <Row>
+                    <Col className = "s12">
+                        <p>Unesite novu šifru</p>
+                    </Col>
+                    <Col className = "npInputPasswordContainer offset-m3 s12 m6">
+                        <Input onChange={this.inputPasswordChanged}
+                                value={this.state.inputPasswordValue}
+                                type="password"
+                                className = "inputLogin" //koristim ovu klasu da ne bi pisao duplo kod za stilizovanje input-a
+                                placeholder = "Nova sifra"
+                        ></Input>
+                     </Col>
+                     <Col className = "npInputRPasswordContainer offset-m3 s12 m6">
+                        <Input onChange={this.inputRPasswordChanged}
+                                value={this.state.inputRPasswordValue}
+                                type="password"
+                                className = "inputLogin" //koristim ovu klasu da ne bi pisao duplo kod za stilizovanje input-a
+                                placeholder = "Ponovite novu sifru"
+                        ></Input>
+                     </Col>
+                     <Col  className = "s12">
+                        <Button className = "btnNp red" onClick={this.btnNpClicked}>
+                            Promeni
+                        </Button>
+                     </Col>
+                </Row>
+            </Container>
+        )
+    }
+}
+
+export default NewPassword;
