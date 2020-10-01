@@ -1,5 +1,7 @@
 .cardLogin{
     border-radius: 6px !important;
+    padding: 0 5%;
+    padding-top: 2%;
 }
 .btnLogin{
     width: 100%;

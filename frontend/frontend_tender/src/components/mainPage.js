@@ -87,13 +87,13 @@ class MainPage extends React.Component {
                               onKeyPress={this.inputKeywordEnterPressed}>
                       </Input>
                     </Col>
-                    <Col className="s2" style = {{margin: 0}}>
+                    <Col className="s1 btnAddKeywordContainer" style = {{margin: 0}}>
                       <Button className = "btnAddKeyword red" onClick={this.btnAddKeywordClicked}>
                           Dodaj
                       </Button>
                     </Col>
                   </Col>
-                  <Col className="offset-s1 s10" >
+                  <Col className="offset-s1 s10" style={{marginTop: "10px"}}>
                     <div className="keyWordCardsContainer">
                       {this.state.keyWordsList.map((keyWord, key) => 
                           <Card key = {key} className = "keyWordCard">
@@ -137,16 +137,16 @@ class MainPage extends React.Component {
                       </tbody>
                     </Table>
                   </Col>
-                  <Col className="s12 paginationContainer">
-                    <Col className="offset-s1 s5 pagCountBtnContainer">
+                  <Col className="offset-s1 s10 paginationContainer">
+                    <Col className="s5 pagCountBtnContainer">
                       <div className="">
                         <Button style = {{backgroundColor: this.state.count == 5 ? "red" : "white"}} className = "btnCountPag" id = "btnCountPag5" onClick = {()=> this.onBtnCountPagClicked(5)}>5</Button>
                         <Button style = {{backgroundColor: this.state.count == 10 ? "red" : "white"}} className = "btnCountPag"  id = "btnCountPag10" onClick = {()=> this.onBtnCountPagClicked(10)}>10</Button>
                         <Button style = {{backgroundColor: this.state.count == 20 ? "red" : "white"}} className = "btnCountPag"  id = "btnCountPag20" onClick = {()=> this.onBtnCountPagClicked(20)}>20</Button>
                       </div>
                     </Col>
-                    <Col className="offset-s3 s3 pagPageContainer">
-                        <Pagination count={20} size="small" className = "pagPage"></Pagination>
+                    <Col className="s7 pagPageContainer">
+                        <Pagination count={20}  className = "pagPage"></Pagination>
                       </Col>
                   </Col>
                 </Col>

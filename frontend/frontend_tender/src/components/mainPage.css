@@ -32,11 +32,17 @@
 .col6{
     width: 25%;
 }
+.btnAddKeywordContainer{
+}
 .btnAddKeyword{
     margin: 0 !important;
 }
 .keyWordCardsContainer{
     display: flex;
+}
+
+.inputKeyword{
+    margin-bottom: 0 !important;
 }
 
 .keyWordCard{
@@ -86,4 +92,9 @@
     -webkit-box-shadow: none;
 	-moz-box-shadow: none;
     box-shadow: none;
+}
+
+.pagPage .MuiPagination-ul{
+    display: flex;
+    justify-content: flex-end;
 }
