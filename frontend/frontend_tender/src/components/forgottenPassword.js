@@ -36,7 +36,7 @@ class ForgottenPassword extends React.Component {
                         <Input onChange={this.inputEmailChanged}
                                 value={this.state.inputEmailValue}
                                 type="email"
-                                className = "inputLogin fpInputEmail" //koristim ovu klasu da ne bi pisao duplo kod za stilizovanje input-a
+                                className = "inputStyle fpInputEmail" //koristim ovu klasu da ne bi pisao duplo kod za stilizovanje input-a
                                 placeholder = "Email address"
                         ></Input>
                      </Col>

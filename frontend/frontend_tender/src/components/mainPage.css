@@ -1,0 +1,89 @@
+.mainPageContainer{
+    background-color: white;
+    padding-top: 20px !important;
+}
+.tenderTable{
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    width: 100%;
+    margin-bottom: 20px ;
+    margin-top: 20px ;
+}
+.tenderTableContainer{
+    background-color: white;
+}
+.tenderTable td, .tenderTable th {
+    padding: 8px;
+}
+.col1{
+    width: 5%;
+}
+.col2{
+    width: 5%;
+}
+.col3{
+    width: 15%;
+}
+.col4{
+    width: 30%;
+}
+.col5{
+    width: 20%;
+}
+.col6{
+    width: 25%;
+}
+.btnAddKeyword{
+    margin: 0 !important;
+}
+.keyWordCardsContainer{
+    display: flex;
+}
+
+.keyWordCard{
+    margin: 0 5px;
+    display: inline-flex !important;
+}
+
+.keyWordCard .card-content div{
+    display: flex;
+    align-items: center;
+}
+
+.cancelKeyWordIcon{/*ovo radi centriranje ne znam ni ja kako*/
+    margin-left: 10px !important;
+    margin-top: 5px !important;
+}
+
+.card .card-content{
+    padding: 8px !important;
+}
+.paginationContainer{
+    display: flex;
+    align-items: center;
+}
+
+.pagCountBtnContainer{ 
+    text-align: left;
+}
+
+.btnCountPag{
+    background-color: white;
+    margin: 0 4px;
+    -webkit-box-shadow: none;
+	-moz-box-shadow: none;
+    box-shadow: none;
+    color: black;
+}
+.btnCountPag:hover{
+    background-color: white !important;
+    -webkit-box-shadow: none;
+	-moz-box-shadow: none;
+    box-shadow: none;
+} 
+
+.pagPage{
+    background-color: white;
+    -webkit-box-shadow: none;
+	-moz-box-shadow: none;
+    box-shadow: none;
+}

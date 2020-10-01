@@ -43,7 +43,7 @@ class NewPassword extends React.Component {
                         <Input onChange={this.inputPasswordChanged}
                                 value={this.state.inputPasswordValue}
                                 type="password"
-                                className = "inputLogin" //koristim ovu klasu da ne bi pisao duplo kod za stilizovanje input-a
+                                className = "inputStyle"
                                 placeholder = "Nova sifra"
                         ></Input>
                      </Col>
@@ -51,7 +51,7 @@ class NewPassword extends React.Component {
                         <Input onChange={this.inputRPasswordChanged}
                                 value={this.state.inputRPasswordValue}
                                 type="password"
-                                className = "inputLogin" //koristim ovu klasu da ne bi pisao duplo kod za stilizovanje input-a
+                                className = "inputStyle"
                                 placeholder = "Ponovite novu sifru"
                         ></Input>
                      </Col>

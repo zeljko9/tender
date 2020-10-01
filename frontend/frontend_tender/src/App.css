@@ -38,6 +38,15 @@
   background-color: rgb(240, 79, 79);
 }
 
+.inputStyle{
+  border: 5px !important;
+  border-radius: 6px !important;
+  padding-left: 10px !important;
+  -webkit-box-shadow: 0 0 0 1px rgba(143, 145, 146, 0.205) !important;
+  box-shadow: 0 0 0 1px rgba(74, 75, 75, 0.205) !important;
+  background-color: white !important;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

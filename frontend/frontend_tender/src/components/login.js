@@ -53,7 +53,7 @@ class Login extends React.Component{
                                     <Input onChange={this.inputEmailChanged}
                                             value={this.state.inputEmailValue}
                                             type="email"
-                                            className = "inputLogin"
+                                            className = "inputStyle"
                                             placeholder = "Email address"
                                     ></Input>
                                 </Col>
@@ -61,7 +61,7 @@ class Login extends React.Component{
                                     <Input onChange={this.inputPasswordChanged}
                                             value={this.state.inputPasswordValue}
                                             type="password"
-                                            className = "inputLogin"
+                                            className = "inputStyle"
                                             placeholder = "Password"
                                     ></Input>
                                 </Col>
