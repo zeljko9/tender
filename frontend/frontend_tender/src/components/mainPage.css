@@ -39,6 +39,9 @@
 }
 .keyWordCardsContainer{
     display: flex;
+    width: 100%;
+    align-content: flex-start;
+    flex-wrap: wrap;
 }
 
 .inputKeyword{
@@ -46,7 +49,7 @@
 }
 
 .keyWordCard{
-    margin: 0 5px;
+    margin: 3px 5px;
     display: inline-flex !important;
 }
 
@@ -58,14 +61,30 @@
 .cancelKeyWordIcon{/*ovo radi centriranje ne znam ni ja kako*/
     margin-left: 10px !important;
     margin-top: 5px !important;
+    color: rgb(238,110,115);
 }
 
 .card .card-content{
     padding: 8px !important;
 }
+
+.thDataContainer{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.sortArrow{
+    font-size: 20px;
+    margin-left: 5px !important;
+    margin-top: 5px !important;
+    color: rgb(238,110,115);
+}
+
 .paginationContainer{
     display: flex;
     align-items: center;
+    padding-right: 0 !important;
 }
 
 .pagCountBtnContainer{ 
@@ -86,6 +105,10 @@
 	-moz-box-shadow: none;
     box-shadow: none;
 } 
+
+.pagPageContainer{
+    padding-right: 0 !important;
+}
 
 .pagPage{
     background-color: white;

@@ -30,6 +30,7 @@ class MainPage extends React.Component {
         this.getOffers = this.getOffers.bind(this);
         this.pageChanged = this.pageChanged.bind(this);
         this.tableTenderThClicked = this.tableTenderThClicked.bind(this);
+        this.onProfileTabClicked = this.onProfileTabClicked.bind(this);
 
         this.state = {
           inputKeywordValue: "",
@@ -37,7 +38,7 @@ class MainPage extends React.Component {
           {name: "laza", prezime: "mini", godina: "2019.", narucilac: "Lazar  kompani", status: "Objavljen", datum: "12.3.2019."},
           {name: "laz", prezime: "min", godina: "2019.", narucilac: "Lazar  kompani", status: "Objavljen", datum: "12.3.2019."},
           {name: "la", prezime: "min", godina: "2019.", narucilac: "Lazar  kompani", status: "Objavljen", datum: "12.3.2019."},],
-          keyWordsList: ["prvi", "drugij vec malo duzi"],
+          keyWordsList: ["prvi", "drugij vec malo duzi","jhfyjf hhg  gghd gh dd gdgdghdhgdgtdghdghd dg dghd ghd gd hd ghfdg d","jvfjh gcfghfcg", "hkvfjghc"],
           count: 5,
           pageCount: 20,
           selectedPage: 1,
@@ -108,6 +109,10 @@ class MainPage extends React.Component {
         }, this.getOffers)
     }
 
+    onProfileTabClicked(){
+      window.location.replace('/profile')
+    }
+
     render(){
         return (
           <div>
@@ -116,7 +121,7 @@ class MainPage extends React.Component {
                 <a href="#" className="brand-logo">Tender</a>
                 <ul id="nav-mobile" className="right">
                   <li><a href="#"><i className="material-icons">home</i></a></li>
-                  <li><a href="#">Username</a></li>
+                  <li onClick={this.onProfileTabClicked}><a href="#">Profile</a></li>
                   <li><a href="#">Log out</a></li>
                 </ul>
               </div>
@@ -162,10 +167,14 @@ class MainPage extends React.Component {
                       <thead>
                         <tr>
                           {tableTenderTh.map((el, key) => 
-                            <th key={key} data-field={el} onClick={()=> this.tableTenderThClicked(el)}>{el}
-                            {this.state.sortBy === el ? 
-                              (this.state.isAsc === true ? <a><i className="material-icons">arrow_downward</i></a> : <a><i className="material-icons">arrow_upward</i></a>) 
-                              : null}</th>
+                            <th key={key} data-field={el} onClick={()=> this.tableTenderThClicked(el)}>
+                              <div className="thDataContainer">
+                                {el}
+                                {this.state.sortBy === el ? 
+                                (this.state.isAsc === true ? <a><i className="sortArrow material-icons">arrow_downward</i></a> : <a><i className="sortArrow material-icons">arrow_upward</i></a>) 
+                                : null}
+                              </div>
+                            </th>
                           )}  
                         </tr>
                       </thead>
@@ -184,13 +193,6 @@ class MainPage extends React.Component {
                     </Table>
                   </Col>
                   <Col className="offset-s1 s10 paginationContainer">
-                    <Col className="s5 pagCountBtnContainer">
-                      <div className="">
-                        <Button style = {{backgroundColor: this.state.count === 5 ? "red" : "white"}} className = "btnCountPag" id = "btnCountPag5" onClick = {()=> this.onBtnCountPagClicked(5)}>5</Button>
-                        <Button style = {{backgroundColor: this.state.count === 10 ? "red" : "white"}} className = "btnCountPag"  id = "btnCountPag10" onClick = {()=> this.onBtnCountPagClicked(10)}>10</Button>
-                        <Button style = {{backgroundColor: this.state.count === 20 ? "red" : "white"}} className = "btnCountPag"  id = "btnCountPag20" onClick = {()=> this.onBtnCountPagClicked(20)}>20</Button>
-                      </div>
-                    </Col>
                     <Col className="s7 pagPageContainer">
                         <Pagination count = {this.state.pageCount}  className = "pagPage" onChange = {(e, page) => {this.pageChanged(page)}}></Pagination>
                       </Col>
@@ -201,4 +203,12 @@ class MainPage extends React.Component {
         )
     }
 }
+/*
+<Col className="s5 pagCountBtnContainer">
+                      <div className="">
+                        <Button style = {{backgroundColor: this.state.count === 5 ? "red" : "white"}} className = "btnCountPag" id = "btnCountPag5" onClick = {()=> this.onBtnCountPagClicked(5)}>5</Button>
+                        <Button style = {{backgroundColor: this.state.count === 10 ? "red" : "white"}} className = "btnCountPag"  id = "btnCountPag10" onClick = {()=> this.onBtnCountPagClicked(10)}>10</Button>
+                        <Button style = {{backgroundColor: this.state.count === 20 ? "red" : "white"}} className = "btnCountPag"  id = "btnCountPag20" onClick = {()=> this.onBtnCountPagClicked(20)}>20</Button>
+                      </div>
+                    </Col> */
 export default MainPage;

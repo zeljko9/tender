@@ -11,6 +11,7 @@ class Login extends React.Component{
         this.btnCreateAccountClicked = this.btnCreateAccountClicked.bind(this);
         this.btnLoginClicked = this.btnLoginClicked.bind(this);
         this.btnForgottenPasswordClicked = this.btnForgottenPasswordClicked.bind(this);
+        this.inputLoginEnterPressed = this.inputLoginEnterPressed.bind(this);
 
         this.state = {
             inputEmailValue: "",
@@ -38,15 +39,22 @@ class Login extends React.Component{
         window.location.replace('/mainPage')
     }
 
+    inputLoginEnterPressed(e){
+        let code = e.keyCode || e.which;
+        if (code === 13) {
+            this.btnLoginClicked()
+        }
+    }
+
     //TODO: slogan prebaci na eng
     render(){
         return (
             <Container className = "loginContainer">
-                <Row>
-                    <Col className="m12 l6">
+                <Row className="loginRow">
+                    <Col className="offset-m2 s12 m8 l5 xl6">
                         <p className = "slogan">SVE NABAVKE NA JEDNOM MESTU</p>
                     </Col>
-                    <Col className="m12 l4">
+                    <Col className="offset-m2 s12 m8 l7 xl5">
                         <Card className = "cardLogin">
                             <Row>
                                 <Col className = "inputEmailContainer s12">
@@ -55,6 +63,7 @@ class Login extends React.Component{
                                             type="email"
                                             className = "inputStyle"
                                             placeholder = "Email address"
+                                            onKeyPress={this.inputLoginEnterPressed}
                                     ></Input>
                                 </Col>
                                 <Col className = "inputPasswordContainer s12">
@@ -63,6 +72,7 @@ class Login extends React.Component{
                                             type="password"
                                             className = "inputStyle"
                                             placeholder = "Password"
+                                            onKeyPress={this.inputLoginEnterPressed}
                                     ></Input>
                                 </Col>
                                 <Col className = "btnLoginContainer s12">

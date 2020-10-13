@@ -30,9 +30,9 @@ class ForgottenPassword extends React.Component {
             <Container>
                 <Row>
                     <Col className = "s12">
-                        <p>Zaboravljena lozinka?</p>
+                        <h5>Zaboravljena lozinka?</h5>
                     </Col>
-                    <Col className = "fpInputEmailContainer offset-m3 s12 m6">
+                    <Col className = "fpInputEmailContainer offset-m1 offset-l2  offset-xl3 s12 m10 l8 xl6">
                         <Input onChange={this.inputEmailChanged}
                                 value={this.state.inputEmailValue}
                                 type="email"

@@ -37,9 +37,9 @@ class NewPassword extends React.Component {
             <Container>
                 <Row>
                     <Col className = "s12">
-                        <p>Unesite novu šifru</p>
+                        <h5>Unesite novu šifru</h5>
                     </Col>
-                    <Col className = "npInputPasswordContainer offset-m3 s12 m6">
+                    <Col className = "npInputPasswordContainer  offset-m1 offset-l2  offset-xl3 s12 m10 l8 xl6">
                         <Input onChange={this.inputPasswordChanged}
                                 value={this.state.inputPasswordValue}
                                 type="password"
@@ -47,7 +47,7 @@ class NewPassword extends React.Component {
                                 placeholder = "Nova sifra"
                         ></Input>
                      </Col>
-                     <Col className = "npInputRPasswordContainer offset-m3 s12 m6">
+                     <Col className = "npInputRPasswordContainer  offset-m1 offset-l2  offset-xl3 s12 m10 l8 xl6">
                         <Input onChange={this.inputRPasswordChanged}
                                 value={this.state.inputRPasswordValue}
                                 type="password"
