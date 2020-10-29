@@ -1,0 +1,25 @@
+.profileRadioButtonsContainer{
+    display: flex;
+    width: 100%;
+    align-content: flex-start;
+    flex-wrap: wrap;
+}
+.profileRadioButtonsContainer p{
+    margin-right: 20px !important;
+}
+.profileRadioButtonsContainer .with-gap:checked+label:after{
+    background-color: red !important;
+}
+.pKwContainer{
+    padding-left: 0 !important;
+}
+.btnCa{
+    margin-top: 20px;
+}
+.labelResetPass{
+    margin-right: 20px !important;
+    margin-left: 10px !important;
+}
+.pResetPassContainer{
+    margin-top: 15px;
+}
