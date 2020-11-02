@@ -39,7 +39,8 @@ class Webtender:
         finally:
             print('')
 
-    def find_table_rows(self):
+    def find_table_rows(self,keyword):
+        self.find_keyword(keyword)
         self.oldDataR=self.newDataR
         str1 = '//*[@id="searchGridContainer"]'
         self.table = self.browser.find_element_by_xpath(str1+'/div/div[6]/div/div/div[1]/div/table/tbody')
