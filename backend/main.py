@@ -2,10 +2,6 @@ import flask
 import uuid
 import json
 from backend import MailSender
-from backend import sqlCom
-
-proba = sqlCom.sqlCom()
-proba.login("naissteh","ygd@naissteh.rs",54154)
 
 app = flask.Flask("__main__")
 
